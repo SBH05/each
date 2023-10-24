@@ -2,13 +2,16 @@ package com.teamproject.hamster.run;
 
 import com.teamproject.hamster.controller.CartController;
 import com.teamproject.hamster.controller.SelectListController;
+import com.teamproject.hamster.dto.ProductDTO;
 import com.teamproject.hamster.view.ListView;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainPage {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
 
         while(true){
           //  memberView mv = new memberView();
@@ -31,7 +34,7 @@ public class MainPage {
                     lv.selectList();
                     continue;
                 case 3 : // 상품선택으로
-                    mysel.selectMenu();
+                  //  mysel.selectMenu(selectLi);
                     continue;
                 case 0 : // 프로그램 종료
                     break;

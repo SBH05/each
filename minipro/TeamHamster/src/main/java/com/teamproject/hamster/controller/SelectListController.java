@@ -10,7 +10,7 @@ public class SelectListController {
 
     private ArrayList<ProductDTO> selectList = new ArrayList<>();
     private Scanner sc = new Scanner(System.in);
-    public void selectMenu() {
+    public void selectMenu(ArrayList<ProductDTO> selectList) {
         int productNumber = 0;
 
         ArrayList<ProductDTO> productList = new ListView().getProductList();
@@ -41,8 +41,6 @@ public class SelectListController {
 
             if (selectList.size() > 0) {
                 System.out.print(productList.size()+3+") 장바구니가기\n");// 장바구니호출하기
-                CartController con = new CartController();
-                con.shopBasket(selectList);
             }
             System.out.print("선택할 상품을 입력하세요 : ");
             productNumber = sc.nextInt();
@@ -60,15 +58,15 @@ public class SelectListController {
             }
             if (productNumber == 18){
                 CartController ct = new CartController();
-                ct.shopBasket(getSelectLists());
+                ct.shopBasket(selectList);
             }
 
         }
     }
 
-    public ArrayList<ProductDTO> getSelectLists(){  // 선택한 상품목록 메소드
-        return selectList;
-    }
+   // public ArrayList<ProductDTO> getSelectLists(){  // 선택한 상품목록 메소드
+     //   return selectList;
+  //  }
 
 }
 

@@ -32,7 +32,7 @@ public class CartController {
                     cartCancel(select);
                     break;
                 case 3:
-                    sel.selectMenu ();
+                    sel.selectMenu (select);
                     break;
                 case 4:
                    // PaymentController pc = new PaymentController();
