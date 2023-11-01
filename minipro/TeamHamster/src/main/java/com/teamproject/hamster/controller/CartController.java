@@ -38,8 +38,8 @@ public class CartController {
                     selectMenu();
                     continue;
                 case 5:
-                    PaymentController pc = new PaymentController();
-                    pc.print(SbList);
+                    //PaymentController pc = new PaymentController();
+                   // pc.print(SbList);
                     break;
                 case 0 :
                     System.out.println("메인페이지로 돌아갑니다.");
